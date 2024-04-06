@@ -1,15 +1,13 @@
+import "./index.css";
+
+import { RouteContainer } from "./routes";
+import VConsole from "vconsole";
 /* @refresh reload */
 import { render } from "solid-js/web";
-import VConsole from "vconsole";
+
 new VConsole();
 
-import "./index.css";
-import { RouteContainer } from "./routes";
-import { getWxTicket } from "./utils";
-
-getWxTicket.then(() => {
-  console.log("wx config init ready");
-});
+// import { getWxTicket } from "./utils";
 
 const root = document.getElementById("root");
 

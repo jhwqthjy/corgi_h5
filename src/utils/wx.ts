@@ -1,5 +1,7 @@
 import { request } from "./request";
 
+let initWxTask: Promise<any> | undefined = undefined;
+
 async function getTicket() {
   const { origin, pathname, search } = window.location;
   const url = origin + pathname + search;
@@ -33,7 +35,15 @@ const initWxConfig = async () => {
     openTagList: ["wx-open-launch-app"],
   });
 
+  console.log("wx config init ready");
+
   return res;
 };
 
-export const getWxTicket = initWxConfig();
+export const getWxTicket = () => {
+  if (!initWxTask) {
+    initWxTask = initWxConfig();
+  }
+
+  return initWxTask;
+};

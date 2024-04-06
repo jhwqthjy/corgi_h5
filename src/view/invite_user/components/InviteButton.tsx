@@ -1,6 +1,6 @@
 import { createSelector, useContext } from "solid-js";
 
-import { InviteUserContext } from "../context";
+import { InviteUserContext } from "@/context";
 import Style from "../Style.module.css";
 import cxb from "classnames/bind";
 

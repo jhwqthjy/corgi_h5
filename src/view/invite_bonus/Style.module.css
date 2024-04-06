@@ -1,0 +1,40 @@
+.invite-bonus-history {
+  background-color: #19181d;
+  min-height: 100vh;
+}
+
+.nav-title {
+  height: 114px;
+  font-size: 20px;
+  color: #cccccc;
+  border-bottom-color: rgb(170, 170, 170);
+  border-bottom-style: solid;
+}
+
+.bonus-history-item {
+  border-bottom-color: rgba(170, 170, 170, 0.3);
+  border-bottom-style: solid;
+  color: #aaa;
+  padding: 14px 18px;
+  font-size: 16px;
+
+  .item-time {
+    font-size: 14px;
+    color: rgba(170, 170, 170, 0.5);
+  }
+}
+
+.bonus-history-footer {
+  font-size: 14px;
+  color: rgba(170, 170, 170, 0.3);
+}
+
+.empty-remind {
+  transform: translateY(-80%);
+
+  color: rgba(170, 170, 170, 0.3);
+
+  .empty-image {
+    width: 116px;
+  }
+}

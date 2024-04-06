@@ -8,6 +8,14 @@
   right: 4%;
 }
 
+.receive-history {
+  position: absolute;
+  top: 71px;
+  right: 12px;
+  width: 93px;
+  height: 32px;
+}
+
 .invite-records {
   .record-item {
     border-radius: 10px;

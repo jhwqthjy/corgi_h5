@@ -1,12 +1,16 @@
-import { Router, Route, A } from "@solidjs/router";
-import App from "./App";
+import { Route, Router } from "@solidjs/router";
+
+import { InviteBonusHistory } from "./view/invite_bonus";
 import { InviteUser } from "./view";
+import { Layout } from "./Layout";
+import { NotFound } from "./404";
 
 export const RouteContainer = () => {
   return (
-    <Router base={"/wechat"}>
+    <Router base={"/wechat"} root={Layout}>
       <Route path="/invite_user" component={InviteUser} />
-      <Route path="/" component={App} />
+      <Route path="/invite_bonus" component={InviteBonusHistory} />
+      <Route path="*" component={NotFound} />
     </Router>
   );
 };

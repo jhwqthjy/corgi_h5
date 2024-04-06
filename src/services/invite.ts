@@ -17,3 +17,12 @@ export function getInvitedSchedule(userId: string) {
     params: { userId },
   });
 }
+
+// 获取领取邀请奖励的记录
+export function getInvitedBonus(userId: string) {
+  return request({
+    url: "/external/get_invited_bonus",
+    method: "get",
+    params: { userId },
+  });
+}

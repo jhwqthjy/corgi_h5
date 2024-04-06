@@ -1,6 +1,7 @@
 import { createSignal, useContext } from "solid-js";
+import { useNavigate, useSearchParams } from "@solidjs/router";
 
-import { InviteUserContext } from "../../context";
+import { InviteUserContext } from "@/context";
 import { Progress } from "@/components";
 import Style from "../../Style.module.css";
 import bannerImage from "@/assets/images/Page1_01.jpg";
@@ -32,10 +33,17 @@ export const IniteProgress = () => {
       console.log("getInvitedSchedule", res);
     });
   }
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  const toReceiveHistory = () => {
+    navigate("/invite_bonus" + window.location.search);
+  };
 
   return (
     <div class={cx("invite-progress", "relative")}>
       <img src={bannerImage} alt="" />
+      <div class={cx("receive-history")} onClick={toReceiveHistory}></div>
       <div class={cx("progress-container", "absolute")}>
         <img src={inviteProgressImage} alt="" />
         <div class={cx("mt-5 flex items-center justify-center")}>
