@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+}
+
+.progress-line-wrap {
+  background-color: #fff;
+}
+
+.progress-line {
+  background-color: #ffc663;
+}
+
+.trophy-icon,
+.rocket-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.rocket-icon {
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.trophy-icon {
+  transform: translateY(-50%);
+}

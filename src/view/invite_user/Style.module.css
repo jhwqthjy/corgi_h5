@@ -1,0 +1,51 @@
+.invite-user {
+  background-color: rgb(25, 24, 29);
+}
+
+.progress-container {
+  top: 80%;
+  left: 4%;
+  right: 4%;
+}
+
+.invite-records {
+  .record-item {
+    border-radius: 10px;
+    background-color: rgba(246, 243, 253, 0.1);
+    color: #fff;
+
+    &:not(:last-of-type) {
+      margin-bottom: 14px;
+    }
+
+    .invite-status-invited {
+      color: #bdac5d;
+    }
+    .invite-status-success {
+      color: #98ae63;
+    }
+
+    .invited-time {
+      color: rgba(204, 204, 204, 0.5);
+    }
+  }
+}
+
+.invite-button {
+  background-color: #ffc663;
+  bottom: 15%;
+  font-size: 20px;
+  color: #222222;
+  height: 72px;
+}
+
+.progress-content {
+  color: rgba(204, 204, 204, 1);
+  font-size: 14px;
+  margin-top: 18px;
+  padding: 0 11px;
+
+  .invite-threshold-text {
+    color: rgba(204, 204, 204, 0.5);
+  }
+}

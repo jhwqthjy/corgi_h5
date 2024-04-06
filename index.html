@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="/src/assets/images/favicon.ico"
+    />
+    <title></title>
+
+    <script type="text/javascript">
+      (function (doc, win) {
+        var docEl = doc.documentElement;
+        var resizeEvt =
+          "orientationchange" in window ? "orientationchange" : "resize";
+        var recalc = function () {
+          var Wid = docEl.clientWidth;
+          if (!Wid) return;
+          if (Wid > 640) Wid = 640;
+          docEl.style.fontSize = 16 * (Wid / 430) + "px";
+        };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        recalc();
+      })(document, window);
+    </script>
+
+    <!-- <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script> -->
+    <!-- <script src="https://g.alicdn.com/jssdk/u-link/index.min.js"></script> -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script src="/src/index.tsx" type="module"></script>
+  </body>
+</html>
