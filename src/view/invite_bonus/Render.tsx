@@ -11,7 +11,7 @@ import { getInvitedBonus } from "@/services/invite";
 const cx = cxb.bind(Style);
 
 export const InviteBonusHistory = () => {
-  document.title = `我发现了一个神仙颜值通讯录软件，快来一起撩小哥哥！`;
+  document.title = `奖励记录`;
 
   const contextValue = useContext(InviteUserContext);
 
@@ -52,7 +52,7 @@ export const InviteBonusHistory = () => {
           ctime: "2024-03-30",
         },
         {
-          title: "这两条是前端追加的测试数据，不是真实的",
+          title: "这两条是前端追加的测试数据",
           desc: "Corgi会员30天",
           ctime: "2024-03-30",
         },

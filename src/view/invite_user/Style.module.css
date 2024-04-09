@@ -32,6 +32,9 @@
     .invite-status-success {
       color: #98ae63;
     }
+    .invite-status-failed {
+      color: #a24c4c;
+    }
 
     .invited-time {
       color: rgba(204, 204, 204, 0.5);

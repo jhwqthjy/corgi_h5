@@ -8,7 +8,7 @@ import inviteStepsImage from "@/assets/images/Page1_03.jpg";
 const cx = cxb.bind(Style);
 
 export const InviteUser = () => {
-  document.title = `我发现了一个神仙颜值通讯录软件，快来一起撩小哥哥！`;
+  document.title = `邀用户得月度会员`;
 
   return (
     <div class={cx("invite-user")}>

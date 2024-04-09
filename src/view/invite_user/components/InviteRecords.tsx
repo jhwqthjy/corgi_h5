@@ -38,6 +38,28 @@ export const InviteRecords = () => {
           {(item, index) => {
             const recordLen = record().length;
 
+            let inviteStatusText = <></>;
+            switch (item.status) {
+              case "0":
+                inviteStatusText = (
+                  <span class={cx("invite-status-invited")}>邀请中...</span>
+                );
+                break;
+              case "1":
+                inviteStatusText = (
+                  <span class={cx("invite-status-success")}>邀请成功</span>
+                );
+                break;
+              case "2":
+                inviteStatusText = (
+                  <span class={cx("invite-status-failed")}>邀请失败</span>
+                );
+                break;
+
+              default:
+                break;
+            }
+
             return (
               <div
                 class={cx(
@@ -53,13 +75,7 @@ export const InviteRecords = () => {
                   <div>{item.wechatName}</div>
                 </div>
                 <div>
-                  <div>
-                    {item.status === "1" ? (
-                      <span class={cx("invite-status-success")}>邀请成功</span>
-                    ) : (
-                      <span class={cx("invite-status-invited")}>邀请中...</span>
-                    )}
-                  </div>
+                  <div>{inviteStatusText}</div>
                   <div
                     class={cx(
                       "invited-time",

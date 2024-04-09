@@ -12,5 +12,10 @@ export const RouteContainer = () => {
       <Route path="/invite_bonus" component={InviteBonusHistory} />
       <Route path="*" component={NotFound} />
     </Router>
+    // <Router base={"/"} root={Layout}>
+    //   <Route path="/" component={InviteUser} />
+    //   <Route path="/invite_bonus" component={InviteBonusHistory} />
+    //   <Route path="*" component={NotFound} />
+    // </Router>
   );
 };
