@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @font-face {
+  font-family: DINPro-Regular;
+  src: url("@/assets/font/DINPro-Regular.otf") format("embedded-opentype");
+} */
+
 body {
   font-family: PingFang SC-Bold, ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10,4 +15,8 @@ body {
 
 img {
   width: 100%;
+}
+
+.num {
+  /* font-family: DINPro-Regular; */
 }

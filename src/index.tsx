@@ -5,7 +5,7 @@ import VConsole from "vconsole";
 /* @refresh reload */
 import { render } from "solid-js/web";
 
-new VConsole();
+// new VConsole();
 
 // import { getWxTicket } from "./utils";
 

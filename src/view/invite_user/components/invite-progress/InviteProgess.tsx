@@ -29,12 +29,10 @@ export const IniteProgress = () => {
       setInvitedPercent(res?.per);
       setInvitedCount(res?.count);
       setInviteThreshold(res?.threshold);
-
-      console.log("getInvitedSchedule", res);
     });
   }
+
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
 
   const toReceiveHistory = () => {
     navigate("/invite_bonus" + window.location.search);
@@ -46,15 +44,19 @@ export const IniteProgress = () => {
       <div class={cx("receive-history")} onClick={toReceiveHistory}></div>
       <div class={cx("progress-container", "absolute")}>
         <img src={inviteProgressImage} alt="" />
-        <div class={cx("mt-5 flex items-center justify-center")}>
-          <Progress className={""} current={invitedPercent} />
-        </div>
-        <div
-          class={cx("progress-content", "flex items-center justify-between")}
-        >
-          <div>已邀请{invitedCount()}位新用户</div>
-          <div class={cx("invite-threshold-text")}>
-            邀请第{inviteThreshold()}位再得1个月会员
+        <div class={cx("progress-main")}>
+          <div class={cx("mt-5 flex items-center justify-center")}>
+            <Progress className={""} current={invitedPercent} />
+          </div>
+          <div
+            class={cx("progress-content", "flex items-center justify-between")}
+          >
+            <div>
+              已邀请<span class="num">{invitedCount()}</span>位新用户
+            </div>
+            <div class={cx("invite-threshold-text")}>
+              邀请第<span class="num">{inviteThreshold()}</span>位再得1个月会员
+            </div>
           </div>
         </div>
       </div>

@@ -25,7 +25,6 @@ export const InviteRecords = () => {
 
   if (contextValue.userId) {
     getWechatInvite(contextValue.userId).then((res: any) => {
-      // setRecord([...res, ...res]);
       setRecord(res);
     });
   }
@@ -34,7 +33,18 @@ export const InviteRecords = () => {
     <div class={cx("invite-records")}>
       <img src={inviteRecordsImage} alt="" />
       <div class={cx("records-list p-4")}>
-        <For each={record()}>
+        <For
+          each={record()}
+          fallback={
+            <div class="h-44">
+              <div
+                class={cx("empty-records", "flex items-center justify-center")}
+              >
+                马上邀请朋友加入吧
+              </div>
+            </div>
+          }
+        >
           {(item, index) => {
             const recordLen = record().length;
 

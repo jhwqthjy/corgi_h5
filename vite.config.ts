@@ -20,6 +20,7 @@ export default defineConfig({
     process.env.NODE_ENV === "production" ? `/html/wechat/invite_user` : "/",
   build: {
     target: "es2018",
+    sourcemap: process.env.NODE_ENV !== "production",
   },
   resolve: {
     alias: {

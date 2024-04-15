@@ -4,8 +4,13 @@
 
 .progress-container {
   top: 80%;
-  left: 4%;
-  right: 4%;
+  left: 0;
+  right: 0;
+
+  .progress-main {
+    width: calc(100% - 32px);
+    margin: auto;
+  }
 }
 
 .receive-history {
@@ -51,12 +56,24 @@
 }
 
 .progress-content {
+  font-family: DINPro-Regular;
   color: rgba(204, 204, 204, 1);
   font-size: 14px;
-  margin-top: 18px;
+  margin-top: 16px;
   padding: 0 11px;
 
   .invite-threshold-text {
     color: rgba(204, 204, 204, 0.5);
   }
+}
+
+.foot-image {
+  width: 116px;
+}
+
+.empty-records {
+  color: rgba(204, 204, 204, 0.25);
+  border-radius: 10px;
+  height: 68px;
+  background-color: rgba(246, 243, 253, 0.1);
 }

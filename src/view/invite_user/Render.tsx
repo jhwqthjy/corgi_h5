@@ -24,8 +24,8 @@ export const InviteUser = () => {
           "flex items-center justify-center pt-14 pb-14"
         )}
       >
-        <div>
-          <img class="h-8" src={inviteFooterImage} alt="" />
+        <div class={cx("foot-image")}>
+          <img class="w-full" src={inviteFooterImage} alt="" />
         </div>
       </div>
     </div>

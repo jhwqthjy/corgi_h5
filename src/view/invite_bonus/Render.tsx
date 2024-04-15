@@ -23,8 +23,6 @@ export const InviteBonusHistory = () => {
   if (contextValue.userId) {
     getInvitedBonus(contextValue.userId)
       .then((res: any) => {
-        console.log("getInvitedBonus", res);
-
         setListData(res);
       })
       .finally(() => {
@@ -42,32 +40,8 @@ export const InviteBonusHistory = () => {
     return <BonusHistory listData={listData} />;
   });
 
-  const appendTestData = () => {
-    setListData([
-      ...listData(),
-      ...[
-        {
-          title: "这两条是前端追加的测试数据，不是真实的",
-          desc: "Corgi会员30天",
-          ctime: "2024-03-30",
-        },
-        {
-          title: "这两条是前端追加的测试数据",
-          desc: "Corgi会员30天",
-          ctime: "2024-03-30",
-        },
-      ],
-    ]);
-  };
-
   return (
     <div class={cx("invite-bonus-history", "flex flex-col")}>
-      <div
-        style={{ color: "#fff", "font-size": "24px" }}
-        onClick={appendTestData}
-      >
-        添加两条测试数据
-      </div>
       <div
         class={cx(
           "nav-title",

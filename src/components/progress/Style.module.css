@@ -20,6 +20,13 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
+.zero-percent {
+  transform: translateX(15%) translateY(-50%);
+}
+.full-percent {
+  transform: translateX(-100%) translateY(-50%);
+}
+
 .trophy-icon {
   transform: translateY(-50%);
 }

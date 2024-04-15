@@ -34,7 +34,7 @@ export const InviteButton = () => {
     <div
       class={cx(
         "invite-button",
-        "fixed left-3 right-3 flex items-center justify-center rounded-full"
+        "fixed left-4 right-4 flex items-center justify-center rounded-full"
       )}
       onClick={handleClick}
     >

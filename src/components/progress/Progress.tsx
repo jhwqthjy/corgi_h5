@@ -38,12 +38,19 @@ export const Progress = (props: IProgressProps) => {
       <div class={cx("progress-line-wrap", "h-5 rounded-full p-0.5")}>
         <div
           class={cx("progress-line", "h-full rounded-full")}
-          style={{ width: percentRatio() + "%" }}
+          style={{ width: percentRatio() ? percentRatio() + "%" : "30px" }}
         />
       </div>
       <div
-        class={cx("rocket-icon", " h-9 w-9")}
-        style={{ left: percentRatio() + "%" }}
+        class={cx(
+          "rocket-icon",
+          percentRatio() ? "" : "zero-percent",
+          current() === max() ? "full-percent" : "",
+          " h-9 w-9"
+        )}
+        style={{
+          left: percentRatio() + "%",
+        }}
       >
         <img src={rocketImage} />
       </div>
